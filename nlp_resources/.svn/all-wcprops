@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/nlp_resources
+END
+stoplist.txt
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/nlp_resources/stoplist.txt
+END
+bnc_unifrqs.normal
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/nlp_resources/bnc_unifrqs.normal
+END
+EnglishPOSTagdict.bin.gz
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/nlp_resources/EnglishPOSTagdict.bin.gz
+END
+EnglishPOS.bin.gz
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/nlp_resources/EnglishPOS.bin.gz
+END
+EnglishPOSDict.bin.gz
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/nlp_resources/EnglishPOSDict.bin.gz
+END
+EnglishSD.bin.gz
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/nlp_resources/EnglishSD.bin.gz
+END
+EnglishChunk.bin.gz
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/nlp_resources/EnglishChunk.bin.gz
+END
+EnglishTok.bin.gz
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/nlp_resources/EnglishTok.bin.gz
+END

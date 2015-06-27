@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/util/control
+END
+StopList.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/util/control/StopList.java
+END
+Lemmatiser.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/util/control/Lemmatiser.java
+END
+Normaliser.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/util/control/Normaliser.java
+END

@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/core/algorithm
+END
+GlossExFeatureWrapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/core/algorithm/GlossExFeatureWrapper.java
+END
+TFIDFAlgorithm.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/core/algorithm/TFIDFAlgorithm.java
+END
+TFIDFFeatureWrapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/core/algorithm/TFIDFFeatureWrapper.java
+END
+WeirdnessAlgorithm.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/core/algorithm/WeirdnessAlgorithm.java
+END
+TermExAlgorithm.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/core/algorithm/TermExAlgorithm.java
+END
+TFAlgorithm.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/core/algorithm/TFAlgorithm.java
+END
+AbstractFeatureWrapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/core/algorithm/AbstractFeatureWrapper.java
+END
+WeirdnessFeatureWrapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/core/algorithm/WeirdnessFeatureWrapper.java
+END
+MyWeirdnessAlgorithm.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/core/algorithm/MyWeirdnessAlgorithm.java
+END
+MyTermExAlgorithm.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/core/algorithm/MyTermExAlgorithm.java
+END
+TermExFeatureWrapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/core/algorithm/TermExFeatureWrapper.java
+END
+WFAlgorithm.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/core/algorithm/WFAlgorithm.java
+END
+LRAlgorithm.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/core/algorithm/LRAlgorithm.java
+END
+MyWeirdnessFeatureWrapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/core/algorithm/MyWeirdnessFeatureWrapper.java
+END
+CValueAlgorithm.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/core/algorithm/CValueAlgorithm.java
+END
+Algorithm.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/core/algorithm/Algorithm.java
+END
+MyTermExFeatureWrapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/core/algorithm/MyTermExFeatureWrapper.java
+END
+LRFeatureWrapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/core/algorithm/LRFeatureWrapper.java
+END
+RIDFAlgorithm.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/core/algorithm/RIDFAlgorithm.java
+END
+GlossExAlgorithm.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/core/algorithm/GlossExAlgorithm.java
+END
+CValueFeatureWrapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/core/algorithm/CValueFeatureWrapper.java
+END

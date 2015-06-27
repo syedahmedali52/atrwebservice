@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/core/feature
+END
+AbstractFeature.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/core/feature/AbstractFeature.java
+END
+GlobalResourceIndex.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/core/feature/GlobalResourceIndex.java
+END
+FeatureCorpusTermFrequency.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/core/feature/FeatureCorpusTermFrequency.java
+END
+FeatureBuilderTermNest.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/core/feature/FeatureBuilderTermNest.java
+END
+FeatureDocumentTermFrequency.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/core/feature/FeatureDocumentTermFrequency.java
+END
+FeatureBuilderRefCorpusTermFrequency.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/core/feature/FeatureBuilderRefCorpusTermFrequency.java
+END
+AbstractFeatureBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/core/feature/AbstractFeatureBuilder.java
+END
+GlobalResourceIndexBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/core/feature/GlobalResourceIndexBuilder.java
+END
+FeatureBuilderCorpusTermFrequency.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/core/feature/FeatureBuilderCorpusTermFrequency.java
+END
+FeatureBuilderDocumentTermFrequency.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/core/feature/FeatureBuilderDocumentTermFrequency.java
+END
+FeatureTermNest.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/core/feature/FeatureTermNest.java
+END
+FeatureRefCorpusTermFrequency.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/core/feature/FeatureRefCorpusTermFrequency.java
+END

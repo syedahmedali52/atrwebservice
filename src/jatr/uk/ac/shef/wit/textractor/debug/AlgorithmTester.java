@@ -1,0 +1,205 @@
+package uk.ac.shef.wit.textractor.debug;
+
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import org.apache.log4j.Logger;
+import uk.ac.shef.wit.textractor.JATRException;
+import uk.ac.shef.wit.textractor.JATRProperties;
+import uk.ac.shef.wit.textractor.core.algorithm.*;
+import uk.ac.shef.wit.textractor.core.feature.*;
+import uk.ac.shef.wit.textractor.core.npextractor.CandidateTermExtractor;
+import uk.ac.shef.wit.textractor.core.npextractor.NounPhraseExtractorOpenNLP;
+import uk.ac.shef.wit.textractor.core.npextractor.WordExtractor;
+import uk.ac.shef.wit.textractor.core.voting.Voting;
+import uk.ac.shef.wit.textractor.core.voting.WeightedOutput;
+import uk.ac.shef.wit.textractor.io.ResultWriter2File;
+import uk.ac.shef.wit.textractor.model.CorpusImpl;
+import uk.ac.shef.wit.textractor.model.Term;
+import uk.ac.shef.wit.textractor.util.control.Lemmatiser;
+import uk.ac.shef.wit.textractor.util.control.StopList;
+import uk.ac.shef.wit.textractor.util.counter.TermFreqCounter;
+import uk.ac.shef.wit.textractor.util.counter.WordCounter;
+
+
+
+/**
+ * Created by IntelliJ IDEA.
+ * Author: Ziqi Zhang
+ * Organisation: Department of Computer Science, University of Sheffield
+ * Email: z.zhang@dcs.shef.ac.uk
+ * Date: 21-Jun-2007
+ * Time: 13:58:47
+ */
+/*
+
+ */
+/*
+(c) Copyright 2004 Natural Language Processing Group, The University of Sheffield
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+1. Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright
+notice, this list of conditions and the following disclaimer in the
+documentation and/or other materials provided with the distribution.
+
+3. The name of the author may not be used to endorse or promote products
+derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+public class AlgorithmTester {
+
+    private Map<Algorithm, AbstractFeatureWrapper> _algregistry = new HashMap<Algorithm, AbstractFeatureWrapper>();
+    private static Logger _logger = Logger.getLogger(AlgorithmTester.class);
+
+    public void registerAlgorithm(Algorithm a, AbstractFeatureWrapper f) {
+        _algregistry.put(a, f);
+    }
+
+    public List<Term> execute(GlobalResourceIndex index) throws JATRException, IOException {
+        _logger.info("Initializing outputter, loading NP mappings...");
+        ResultWriter2File writer = new ResultWriter2File(index);
+        if (_algregistry.size() == 0) {
+            throw new JATRException("No algorithm registered!");
+        }
+        _logger.info("Running NP recognition...");
+          Term[] result=null;
+        /*.extractNP(c);*/
+        for (Map.Entry<Algorithm, AbstractFeatureWrapper> en : _algregistry.entrySet()) {
+            _logger.info("Running feature store builder and ATR..." + en.getKey().toString());
+            result = en.getKey().execute(en.getValue());
+             
+            // writer.output(result, en.getKey().toString() + ".txt");
+        }
+             return Arrays.asList(result);
+       
+    }
+
+    public void voting(String filename) throws JATRException, IOException {
+        ArrayList<String> algorithms = new ArrayList<String>();    
+        for (Map.Entry<Algorithm, AbstractFeatureWrapper> en : _algregistry.entrySet()) {
+            algorithms.add(en.getKey().toString() + ".txt");
+        }
+        this.voting(filename, algorithms);        
+    }
+    
+    public void voting(String filename, ArrayList<String> algorithms) throws JATRException, IOException {
+        Voting vo = new Voting();
+        WeightedOutput[] wlist = new WeightedOutput[algorithms.size()];        
+        int i = 0;        
+        for (String alg : algorithms) {
+            
+            List<Term> termList = vo.load(alg);            
+            wlist[i] = new WeightedOutput(termList, 1.0);
+            i++;
+        }
+
+        List<Term> votedTerms = vo.calculate(wlist);
+        vo.output(votedTerms, filename);
+    }
+
+    public static void main(String[] args) {
+        try {
+           /* System.out.println(new Date());
+            StopList stop = new StopList();
+            Lemmatizer lemmatizer = new Lemmatizer();
+            Extractor wordextractor = new WordExtractor(stop,lemmatizer);
+            NPFreqCounter npcounter=new NPFreqCounter();
+            WordCounter wordcounter = new WordCounter();
+            
+            GlobalResourceIndexBuilder builder = new GlobalResourceIndexBuilder();
+            
+            GlobalResourceIndex wordDocIndex=builder.build(new CorpusImpl(args[0]), wordextractor);
+            wordextractor.finalizeState();
+            THashMap<String, THashSet<String>> mapping = new NPMappingLoader(true).loadMap();
+            
+            
+            FeatureCorpusTermFrequency termCorpusFreq =
+            new FeatureBuilderCorpusTermFrequency(npcounter,wordcounter,lemmatizer,mapping).build(wordDocIndex);
+            
+            AlgorithmTester tester = new AlgorithmTester(mapping);
+            tester.registerAlgorithm(new TFIDFAlgorithm(), new TFIDFFeatureWrapper(termCorpusFreq));
+            
+            tester.execute();
+            System.out.println(new Date());*/
+            
+            String background = JATRProperties.getInstance().getRefCorpusPath();
+            String corpus = args[0];
+            if (args.length == 2) {
+                background = args[1];
+            }
+
+            System.out.println(new Date());
+            StopList stop = new StopList(true);
+            Lemmatiser lemmatizer = new Lemmatiser();
+            CandidateTermExtractor npextractor = new NounPhraseExtractorOpenNLP(stop, lemmatizer);
+            CandidateTermExtractor wordextractor = new WordExtractor(stop, lemmatizer);
+            TermFreqCounter npcounter = new TermFreqCounter();
+            WordCounter wordcounter = new WordCounter();
+
+            GlobalResourceIndexBuilder builder = new GlobalResourceIndexBuilder();
+
+            GlobalResourceIndex wordDocIndex = builder.build(new CorpusImpl(corpus), wordextractor);
+            GlobalResourceIndex termDocIndex = builder.build(new CorpusImpl(corpus), npextractor);
+
+            FeatureCorpusTermFrequency wordFreq =
+                    new FeatureBuilderCorpusTermFrequency(npcounter, wordcounter, lemmatizer).build(wordDocIndex);
+            FeatureDocumentTermFrequency termDocFreq =
+                    new FeatureBuilderDocumentTermFrequency(npcounter, wordcounter, lemmatizer).build(termDocIndex);
+            FeatureTermNest termNest =
+                    new FeatureBuilderTermNest().build(termDocIndex);
+            FeatureRefCorpusTermFrequency bncRef =
+                    new FeatureBuilderRefCorpusTermFrequency(background).build(null);
+            FeatureCorpusTermFrequency termCorpusFreq =
+                    new FeatureBuilderCorpusTermFrequency(npcounter, wordcounter, lemmatizer).build(termDocIndex);
+
+            AlgorithmTester tester = new AlgorithmTester();
+            tester.registerAlgorithm(new TFIDFAlgorithm(), new TFIDFFeatureWrapper(termCorpusFreq));
+            tester.registerAlgorithm(new GlossExAlgorithm(), new GlossExFeatureWrapper(termCorpusFreq, wordFreq, bncRef));
+            tester.registerAlgorithm(new WeirdnessAlgorithm(), new WeirdnessFeatureWrapper(wordFreq, termCorpusFreq, bncRef));
+            tester.registerAlgorithm(new MyWeirdnessAlgorithm(), new MyWeirdnessFeatureWrapper(wordFreq, termCorpusFreq, bncRef));
+            tester.registerAlgorithm(new WFAlgorithm(), new MyWeirdnessFeatureWrapper(wordFreq, termCorpusFreq, bncRef));
+            tester.registerAlgorithm(new CValueAlgorithm(), new CValueFeatureWrapper(termCorpusFreq, termNest));
+            tester.registerAlgorithm(new TermExAlgorithm(), new TermExFeatureWrapper(termDocFreq, wordFreq, bncRef));
+            tester.registerAlgorithm(new MyTermExAlgorithm(), new MyTermExFeatureWrapper(termDocFreq, wordFreq, bncRef));
+            tester.registerAlgorithm(new LRAlgorithm(), new LRFeatureWrapper(wordFreq, termCorpusFreq, bncRef));
+            tester.registerAlgorithm(new TFAlgorithm(), new LRFeatureWrapper(wordFreq, termCorpusFreq, bncRef));
+            tester.registerAlgorithm(new RIDFAlgorithm(), new TFIDFFeatureWrapper(termCorpusFreq));
+
+            tester.execute(termDocIndex);
+            System.out.println(new Date());
+            
+            /*tester.voting("Voting.txt");
+            
+            ArrayList<String> al = new ArrayList<String>();
+            al.add("MyWeirdness_ATR_ALGORITHM.txt");
+            al.add("TfIdf_ATR_ALGORITHM.txt");
+            tester.voting("Voting_Weirdness_Tfidf.txt", al);*/
+
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+}

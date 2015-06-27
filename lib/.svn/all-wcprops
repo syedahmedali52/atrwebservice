@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/lib
+END
+opennlp-tools-1.3.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/lib/opennlp-tools-1.3.0.jar
+END
+dragontool.jar
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/lib/dragontool.jar
+END
+jwnl.jar
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/lib/jwnl.jar
+END
+jwnl-1.3.3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/lib/jwnl-1.3.3.jar
+END
+wit-commons.jar
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/lib/wit-commons.jar
+END
+jakarta-ant-optional.jar
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/lib/jakarta-ant-optional.jar
+END
+ant.jar
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/lib/ant.jar
+END
+text.jar
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/lib/text.jar
+END
+junit-4.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/lib/junit-4.1.jar
+END
+junit.jar
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/lib/junit.jar
+END
+maxent-2.4.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/lib/maxent-2.4.0.jar
+END
+lucene-core-2.0.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/lib/lucene-core-2.0.0.jar
+END
+trove.jar
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/lib/trove.jar
+END
+commons-logging.jar
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/lib/commons-logging.jar
+END
+log4j-1.2.15.jar
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/lib/log4j-1.2.15.jar
+END

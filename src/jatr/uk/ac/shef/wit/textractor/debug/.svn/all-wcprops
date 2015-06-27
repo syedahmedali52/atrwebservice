@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/debug
+END
+TestCValue.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/debug/TestCValue.java
+END
+TestWeirdness.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/debug/TestWeirdness.java
+END
+TestTermEx.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/debug/TestTermEx.java
+END
+TestGlossEx.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/debug/TestGlossEx.java
+END
+TestTfIdf.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/debug/TestTfIdf.java
+END
+VotingTester.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/debug/VotingTester.java
+END
+AlgorithmTester.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/6/trunk/jajatr/src/jatr/src/uk/ac/shef/wit/textractor/debug/AlgorithmTester.java
+END
